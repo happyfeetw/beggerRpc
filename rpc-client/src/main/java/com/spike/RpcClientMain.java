@@ -2,10 +2,7 @@ package com.spike;
 
 import com.spike.api.ISayHelloService;
 
-
 public class RpcClientMain {
-
-
 
     public static void main(String[] args) {
         String msg = "hello cardiB how are you!";

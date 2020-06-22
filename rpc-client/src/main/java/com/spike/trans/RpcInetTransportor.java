@@ -37,8 +37,8 @@ public class RpcInetTransportor {
         // 处理通信数据
 
         try (
-                ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
-                ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
+            ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+            ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         ) {
             // 将数据写入socket流中
             out.writeObject(request);
@@ -46,7 +46,6 @@ public class RpcInetTransportor {
 
             // 从socket中获取服务端的响应数据并返回
             return in.readObject();
-
 
         } catch (IOException e) {
             e.printStackTrace();

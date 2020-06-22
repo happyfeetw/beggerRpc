@@ -12,6 +12,6 @@ public class RpcServerMain {
         SayHelloServiceImpl sayHelloService = new SayHelloServiceImpl(); // 实例化
         System.out.println("RPC服务端已启动...");
         RpcProxy rpcProxy = new RpcProxy();
-        rpcProxy.export(sayHelloService,5555);
+        rpcProxy.export(sayHelloService, 5555);
     }
 }

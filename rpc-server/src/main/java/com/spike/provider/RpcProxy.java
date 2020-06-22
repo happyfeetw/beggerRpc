@@ -13,6 +13,7 @@ public class RpcProxy {
 
     /**
      * 暴露服务
+     *
      * @param service
      * @param port
      */
@@ -22,7 +23,7 @@ public class RpcProxy {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
         try (
-                ServerSocket ss = new ServerSocket(port)
+            ServerSocket ss = new ServerSocket(port)
         ) {
             // 监听本地port
 

@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 /**
- * 远程调用请求对象
- * 包含了调用服务端对象所需的各种信息
+ * 远程调用请求对象 包含了调用服务端对象所需的各种信息
  */
 public class RpcRequest implements Serializable {
     private static final long serialVersionUID = -5782353788305635676L;
@@ -50,10 +49,10 @@ public class RpcRequest implements Serializable {
     @Override
     public String toString() {
         return "RpcRequest{" +
-                "className='" + className + '\'' +
-                ", methodName='" + methodName + '\'' +
-                ", params=" + Arrays.toString(params) +
-                ", types=" + Arrays.toString(types) +
-                '}';
+            "className='" + className + '\'' +
+            ", methodName='" + methodName + '\'' +
+            ", params=" + Arrays.toString(params) +
+            ", types=" + Arrays.toString(types) +
+            '}';
     }
 }

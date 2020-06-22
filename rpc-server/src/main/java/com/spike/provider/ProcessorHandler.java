@@ -25,11 +25,11 @@ public class ProcessorHandler implements Runnable {
         // 在try中声明的流资源可以自动关闭
         // socket通信双工协议
         try (
-                ObjectInputStream in = new ObjectInputStream(socket.getInputStream()); // 接收客户端发来的需要调用的方法的相关信息
-                ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream()); // 接收自身调用目标方法得到的结果
+            ObjectInputStream in = new ObjectInputStream(socket.getInputStream()); // 接收客户端发来的需要调用的方法的相关信息
+            ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream()); // 接收自身调用目标方法得到的结果
         ) {
             RpcRequest rpcRequest = (RpcRequest) in.readObject(); // 拿到客户端发来的数据
-            System.out.println("收到客户端的请求："+ rpcRequest.toString());
+            System.out.println("收到客户端的请求：" + rpcRequest.toString());
             Object result = invoke(rpcRequest); // 根据数据调用对应方法并获得调用结果
             out.writeObject(result); // 将调用结果写入输出流中
             out.flush(); // 将输出流刷入socket传输到客户端
