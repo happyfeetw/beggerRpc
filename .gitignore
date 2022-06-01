@@ -2,3 +2,4 @@
 /rpc-api/target/
 /rpc-client/target/
 /rpc-server/target/
+.idea/*
